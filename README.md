@@ -1,4 +1,5 @@
 # Meraki EOL Manager
+
 Obtain a lifecycle report from all of your Cisco Meraki organizations, detailing how many of your devices have EoL announcements published.
 
 # Table of Contents
@@ -36,7 +37,12 @@ This script allows you to obtain a report of all of the End of Sales and End of 
 ## How to Use
 
 1. Clone repo to your working directory
-2. Edit `config.py` with your API Key in between the quotation marks next to `api_key = `
+2. Edit `config.py`
+   - Set your API Key in between the quotation marks next to `api_key =`
+   - Set `html_output` to `TRUE` if you would like an HTML and PDF report
+   - Set `output_log` to `TRUE` if you would like an output file from all Meraki API calls
+   - Set `print_console` to `TRUE` if you would like to see Meraki API output on the screen during script run.
+
 3. Run `pip install -r requirements.txt` from your terminal
 4. Run the script `python main.py`
 5. You will be prompted with a list of the organizations your API Key has access to
